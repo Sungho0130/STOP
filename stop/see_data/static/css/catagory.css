@@ -1,0 +1,7 @@
+#wrap{
+	min-height: calc(100vh - 50rem); /* footer 높이를 빼준다. */
+	background: black;
+}
+footer{
+	height: 8rem; /* footer 높이 */
+}

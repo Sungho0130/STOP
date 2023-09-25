@@ -1,4 +1,4 @@
-
+<!-- 내비게이션 바 -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container px-4 px-lg-5 mt-3">
             <div class="d-md-flex justify-content-md-end ms-auto">
@@ -6,11 +6,31 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="expand">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link">Home</a>
-                        <a href="#" class="nav-item nav-link">About</a>
-                        <a href="#" class="nav-item nav-link">Contact</a>
+                    <div class="justify-content-start">
+                        <div class="navbar-nav" style="color: #000000; font-size: 1.5rem;"> <!-- 폰트 사이즈 조절 및 색깔 지정-->
+                            <a href="{% url 'main_page' %}" class="nav-item nav-link">홈</a>
+                            <a href="{% url 'detail_page' %}" class="nav-item nav-link">자료실</a>
+                            <ul class="navbar-nav ">
+                            <li class="nav-item dropdown"> <!-- 드롭다운 버튼 -->
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">카테고리</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{% url 'cause_of_page' %}">발생 요인</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'preventive_page' %}">예방 요인</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'analysis_page' %}">회귀 분석</a></li>
+                                    <li><hr class="dropdown-divider"></li> <!-- 드롭다운 선으로 나눠주기 -->
+                                    <li><a class="dropdown-item" href="https://news.seoul.go.kr/citybuild/files/2013/05/5180e1e89fd823.67754200.pdf">"CPTED"...</a></li>
+                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001047795">CCTV 의 범죄예방...</a></li>
+                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002171708">CPTED 범죄예방...</a></li>
+                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002207259">범죄예방용 CCTV...</a></li>
+                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002625938">방범용 CCTV...</a></li>
+                                    <li><a class="dropdown-item" href="https://ettrends.etri.re.kr/ettrends/182/0905182002/"> 지능형 CCTV...</a></li>
+                              </ul>
+                            </li>
+                            </ul>
+                        </div>
+
                     </div>
+                    <!-- 인스타 -->
                     <form class="d-flex d-md-flex justify-content-md-end">
                         <button class="btn btn float-right">
                             <a class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"
@@ -18,6 +38,7 @@
                             </a>
                         </button>
                     </form>
+                    <!-- 이메일 문의 -->
                     <form class="d-flex">
                         <button class="btn btn float-right">
                             <a class="fa-regular fa-envelope fa-2xl" style="color: #ffffff;"

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
-    <!-- footer css 설정 -->
     <link rel="stylesheet" href="{% static 'css/catagory.css' %}"/>
     <script src="{% static 'js/scripts.js'%}" type="text/javascript"></script>
     <link href="{% static 'bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
@@ -12,17 +11,15 @@
     <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
     <title>STOP! CRIME!</title>
 </head>
-<!-- 뒷 배경 이미지 설정 -->
-<body background="https://cdn.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg">
+<body background="https://velog.velcdn.com/images%2Fskila%2Fpost%2F7000ebd9-a067-4b63-84c6-83d950d2c0df%2Fvisual%20analyse.gif">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- 내비게이션 바 -->
     {% include "page/navbar.html" %}
     <br>
     <br>
     <br>
     <br>
     <br>
-    <center> <!-- 영상 센터 -->
+    <center>
         <!-- 영상 띄우기(일부러 autoplay 안넣음) -->
         <div class="col">
             <iframe style="border-radius: 0.8rem" width="1050" height="600"
@@ -32,14 +29,14 @@
             </iframe>
         </div>
     </center>
+
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <!-- 소개글 -->
                 <div class="col-12" id="wrap">
                     <img src="https://mblogthumb-phinf.pstatic.net/MjAyMTA1MTNfMjU0/MDAxNjIwOTEwMjg1Mzcw.htCqwuMBUmne84FsLQ3GmKqalQFvPSk7WKg6p3EuLvkg.V0wmUGEV0nrBqLcrVPv4-mrFm0hYPsGJ0FYKq1YUynog.JPEG.fklir/IMG_7117.jpg?type=w800"
                          style="float:left; width:500px; height:400px">
-                    <div class="text-center text-light" id="left-area">
+                    <div class="text-center text-light" id="left-area"> <!-- 소개글 -->
                         <p>소개글쓸거에요</p>
                     </div>
                 </div>
@@ -48,28 +45,21 @@
             <div class="card-body">
                 <div class="row">
                     <div class="card col-6" style="width: 40rem;">
-                        <!-- 그래프 -->
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            여기에는 그래프가 들어갈건데 <br>
-
-                            그래프를 아직 넣지 않았기 때문에 <br>
-
-                            공백으로 두긴 뭐해서 <br>
-
-                            끄적끄적 써보았습니다. <br>
-                        </p>
+                        <div class="card-body"> <!-- 그래프 넣을거임~ -->
+                            <iframe src = 'https://public.tableau.com/views/map1_4_16956299179020/1_1?:embed=yes&:showVizHome=no'
+                                    width = "585" height ="1000">
+                            </iframe>
                         </div>
                     </div>
                     <div class="col-6" id="right-area"> <!-- 범죄 예방 관련 번호 | 이미지로 대체 -->
-                        <img class="card-img-top" src="http://home.kepco.co.kr/kepco/cmmn/fms/getImage.do?atchFileId=FILE_000000021174914" alt="범죄 신고 번호 자리"/>
+                        <img class="card-img-top" src="http://home.kepco.co.kr/kepco/cmmn/fms/getImage.do?atchFileId=FILE_000000021174914"
+                             width = "585" height ="1100" alt="범죄 신고 번호 자리"/>
                     </div>
                 </div>
             </div>
         </div>
+    <!-- 영상아래 새로운 컨테이너 -->
     </section>
-    <!-- 푸터 -->
     {% include "page/footer.html" %}
 </body>
 </html>

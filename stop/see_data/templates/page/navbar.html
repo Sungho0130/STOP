@@ -6,14 +6,14 @@
                     <div>
                         <div class="navbar-nav" style="color: #000000; font-size: 1.5rem;">
                             <a href="{% url 'main_page' %}" class="nav-item nav-link">홈</a>
-                            <a href="{% url 'detail_page' %}" class="nav-item nav-link">자료실</a>
+<!--                            <a href="{% url 'detail_page' %}" class="nav-item nav-link">자료실</a>-->
                             <ul class="navbar-nav"> <!-- ms-auto: 왼쪽으로 가능한 한 최대치 여백 확보-->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">그래프</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="{% url 'cause_of_page' %}">발생 요인</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'preventive_page' %}">예방 요인</a></li>
                                         <li><a class="dropdown-item" href="{% url 'analysis_page' %}">회귀 분석</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'cause_of_page' %}">시각화 자료1</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'preventive_page' %}">시각화 자료2</a></li>
                                   </ul>
                                 </li>
                                 <li class="nav-item dropdown">

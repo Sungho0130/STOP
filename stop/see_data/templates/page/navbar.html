@@ -1,44 +1,37 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container px-4 px-lg-5 mt-3">
-            <div class="d-md-flex justify-content-md-end ms-auto">
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#expand">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="d-md-flex ms-auto">
                 <div class="collapse navbar-collapse" id="expand">
-                    <div class="justify-content-start">
+                    <div>
                         <div class="navbar-nav" style="color: #000000; font-size: 1.5rem;">
                             <a href="{% url 'main_page' %}" class="nav-item nav-link">홈</a>
                             <a href="{% url 'detail_page' %}" class="nav-item nav-link">자료실</a>
-                            <ul class="navbar-nav "> <!-- ms-auto: 왼쪽으로 가능한 한 최대치 여백 확보-->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">카테고리</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{% url 'cause_of_page' %}">발생 요인</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'preventive_page' %}">예방 요인</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'analysis_page' %}">회귀 분석</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="https://news.seoul.go.kr/citybuild/files/2013/05/5180e1e89fd823.67754200.pdf">"CPTED"...</a></li>
-                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001047795">CCTV 의 범죄예방...</a></li>
-                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002171708">CPTED 범죄예방...</a></li>
-                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002207259">범죄예방용 CCTV...</a></li>
-                                    <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002625938">방범용 CCTV...</a></li>
-                                    <li><a class="dropdown-item" href="https://ettrends.etri.re.kr/ettrends/182/0905182002/"> 지능형 CCTV...</a></li>
-                              </ul>
-                            </li>
+                            <ul class="navbar-nav"> <!-- ms-auto: 왼쪽으로 가능한 한 최대치 여백 확보-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">그래프</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{% url 'cause_of_page' %}">발생 요인</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'preventive_page' %}">예방 요인</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'analysis_page' %}">회귀 분석</a></li>
+                                  </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">참고문헌</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="https://news.seoul.go.kr/citybuild/files/2013/05/5180e1e89fd823.67754200.pdf" target="_blank">"CPTED"...</a></li>
+                                        <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001047795" target="_blank">CCTV 의 범죄예방...</a></li>
+                                        <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002171708" target="_blank">CPTED 범죄예방...</a></li>
+                                        <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002207259" target="_blank">범죄예방용 CCTV...</a></li>
+                                        <li><a class="dropdown-item" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002625938" target="_blank">방범용 CCTV...</a></li>
+                                        <li><a class="dropdown-item" href="https://ettrends.etri.re.kr/ettrends/182/0905182002/" target="_blank"> 지능형 CCTV...</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-
                     </div>
-                    <form class="d-flex d-md-flex justify-content-md-end">
-                        <button class="btn btn float-right">
-                            <a class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"
-                             href="#" target="_blank" >
-                            </a>
-                        </button>
-                    </form>
                     <form class="d-flex">
-                        <button class="btn btn float-right">
+                        <button class="btn btn">
                             <a class="fa-regular fa-envelope fa-2xl" style="color: #ffffff;"
                                href="{% url 'ask_page' %}" target="_blank" >
                             </a>
@@ -48,3 +41,17 @@
             </div>
         </div>
     </nav>
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {          <!-- DOMContentLoaded 이벤트가 발생했을 때 실행되는 함수 -->
+    const searchInput = document.getElementById("search-input");    <!-- search-input 아이디를 가진 요소를 가져옴 -->
+    const carIcon = document.querySelector(".car-icon");            <!-- car-icon" 클래스를 가진 요소를 가져옴 -->
+    searchInput.addEventListener("blur", function() {               <!-- 검색 입력란에서 포커스가 벗어났을 때 이벤트 등록 -->
+        carIcon.style.opacity = 0;                                  <!-- "carIcon"의 투명도를 0으로 설정하여 아이콘을 숨김 -->
+    });
+     searchInput.addEventListener("focus", function() {              <!-- 검색 입력란에 포커스 이벤트 등록 -->
+        carIcon.style.opacity = 1;                                  <!-- carIcon의 투명도를 1로 설정하여 아이콘을 표시 -->
+    });
+});
